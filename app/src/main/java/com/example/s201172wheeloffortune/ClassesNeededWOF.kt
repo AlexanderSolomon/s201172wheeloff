@@ -16,7 +16,7 @@ fun main(){
 // A class called questions.
 // 3-5 different categories
 // each category has 5-10 Words
-
+/*
 4 lives
 0 point
 
@@ -26,3 +26,6 @@ random 1-6
 5-6 få liv
 
         skrive noget
+
+
+ */
