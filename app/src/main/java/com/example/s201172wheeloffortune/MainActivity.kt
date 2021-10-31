@@ -17,24 +17,38 @@ class MainActivity : AppCompatActivity() {
         val myWrittenText = findViewById(R.id.WrittenText) as TextView
         val myTextView = findViewById(R.id.textView) as TextView
 
-        var timesClicked = 0
+       // var timesClicked = 0
 // set on-click listener
         // execute what is in the brackets
         // toast quick msg on screen of user
-        btnClickMe.setOnClickListener {
+      /*  btnClickMe.setOnClickListener {
            // timesClicked = timesClicked+1
             timesClicked += 1
             myWrittenText.text = timesClicked.toString()
             Toast.makeText(this@MainActivity, "Spinning the wheel.", Toast.LENGTH_SHORT).show()
-        }
-
-        // text watcher
-
-
+        }*/
+btnClickMe.setOnClickListener {
+spinWheel()
+}
 
     }
 
+    private fun spinWheel() {
+      val wheel = Wheel(8)
+        val wheelSpin = wheel.roll()
+        val resultTextView: TextView = findViewById(R.id.WrittenText)
+        resultTextView.text = wheelSpin.toString()
+    }
+
 }
+
+class Wheel(val wheelSpin: Int){
+    fun roll(): Int{
+        return(1..wheelSpin).random()
+    }
+}
+
+
 fun livesLeft(){
     var life = 4
     if (life >= 1){
@@ -48,4 +62,6 @@ fun userInput(){
     println("Guess a Letter or word: $stringInput")
 
 }
+
+
 
