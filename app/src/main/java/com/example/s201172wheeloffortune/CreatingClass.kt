@@ -1,5 +1,5 @@
 package com.example.s201172wheeloffortune
-
+/*
 import com.example.s201172wheeloffortune.userInput as userInput1
 
 fun main(){
@@ -18,3 +18,4 @@ class Person constructor(firstName: String, lastName: String){
 }
 
 
+*/
